@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trudent Admin Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="admin-body">
+  <main class="admin-shell">
+    <div class="container">
+      <section class="admin-hero">
+        <div>
+          <span class="eyebrow">Control Center</span>
+          <h1>Trudent growth dashboard</h1>
+          <p class="admin-subtitle">Track new inquiries, monitor doctor listings, and keep the website ready for conversions.</p>
+        </div>
+        <a class="btn btn-dark" href="/index.html">View Website</a>
+      </section>
+
+      <section class="metrics-grid">
+        <article class="metric-card">
+          <span class="muted">Doctors Listed</span>
+          <strong id="doctorCount">0</strong>
+        </article>
+        <article class="metric-card">
+          <span class="muted">Leads Captured</span>
+          <strong id="leadCount">0</strong>
+        </article>
+        <article class="metric-card">
+          <span class="muted">Latest Inquiry</span>
+          <strong id="latestLead">No leads yet</strong>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="admin-card">
+          <span class="card-topline">Add Doctor</span>
+          <h3>Create a doctor profile</h3>
+          <p>Add the doctor information shown on the public website to strengthen trust and improve conversions.</p>
+
+          <form class="admin-form" id="doctorForm">
+            <div class="field">
+              <label for="doctorName">Doctor name</label>
+              <input id="doctorName" placeholder="Dr. Ayesha Khan" required>
+            </div>
+
+            <div class="field">
+              <label for="doctorSpecialization">Specialization</label>
+              <input id="doctorSpecialization" placeholder="Dental Implants & Smile Rehab" required>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="doctorExperience">Experience</label>
+                <input id="doctorExperience" placeholder="12+ years experience">
+              </div>
+              <div class="field">
+                <label for="doctorAvailability">Availability</label>
+                <input id="doctorAvailability" placeholder="Mon-Sat | 10 AM-7 PM">
+              </div>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Save Doctor</button>
+            <div class="form-note" id="dashboardStatus">Dashboard data updates instantly after each action.</div>
+          </form>
+        </article>
+
+        <div class="lists-grid">
+          <article class="admin-card">
+            <span class="card-topline">Doctor Profiles</span>
+            <h3>Website specialists</h3>
+            <div class="stack-list" id="doctorList"></div>
+          </article>
+
+          <article class="admin-card">
+            <span class="card-topline">Lead Inbox</span>
+            <h3>Recent patient inquiries</h3>
+            <div class="lead-table" id="leadList"></div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="/admin.js"></script>
+</body>
+</html>
